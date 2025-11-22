@@ -1,54 +1,104 @@
-# curd-operation
-#use python
-#use django
-#use in html,css javascript
-#sqlite database
-#use in git
-#php
-#mysql
-#setup django evviorment for running project
-python3 -m venv env
-#install django
-pip install django
-#make a git folder
-git init folder name
+CRUD OPERATION PROJECT
 
-#make a project
-django-admin startproject zedblock
+Technology Used:
+- Python
+- Django
+- HTML, CSS, JavaScript
+- SQLite Database
+- Git
+- PHP
+- MySQL
 
-#make a app
-python manage.py startapp app
+-----------------------------------------
+SETUP DJANGO ENVIRONMENT
+-----------------------------------------
 
-#go in setting.py and setup in
-installed [
-'zedblock',
-'app',
-]
+1. Create virtual environment:
+   python3 -m venv env
 
-#create a superuser
-python manage.py createsuperuser
+2. Activate environment:
+   Linux/macOS: source env/bin/activate
+   Windows: env\Scripts\activate
 
-#setup database migrations
-python manage.py makemigrations
+3. Install Django:
+   pip install django
 
-after migrate
-python manage.py migrate
+-----------------------------------------
+GIT SETUP
+-----------------------------------------
 
-#create a templates for html page
-#create models for database orm
+4. Initialize git folder:
+   git init
 
-setup url and write operations in views.py 
+-----------------------------------------
+DJANGO PROJECT SETUP
+-----------------------------------------
 
-after add some file in git 
+5. Create Django project:
+   django-admin startproject zedblock
 
-git add file name second filename
+6. Create app:
+   python manage.py startapp app
 
-git commit (changes)
+7. Add apps inside settings.py:
 
-after check git status
+   INSTALLED_APPS = [
+       'django.contrib.admin',
+       'django.contrib.auth',
+       'django.contrib.contenttypes',
+       'django.contrib.sessions',
+       'django.contrib.messages',
+       'django.contrib.staticfiles',
 
-and after run the run command
+       'zedblock',
+       'app',
+   ]
 
-python manage.py runserver
+-----------------------------------------
+DATABASE SETUP
+-----------------------------------------
 
+8. Create superuser:
+   python manage.py createsuperuser
 
+9. Make migrations:
+   python manage.py makemigrations
+
+10. Apply migrations:
+    python manage.py migrate
+
+-----------------------------------------
+FRONTEND SETUP
+-----------------------------------------
+
+11. Create templates folder for HTML pages:
+    app/templates/
+
+12. Create models inside:
+    app/models.py
+
+13. Create CRUD operations inside:
+    app/views.py
+
+14. Setup URLs:
+    Create app/urls.py and include it in zedblock/urls.py
+
+-----------------------------------------
+GIT COMMANDS
+-----------------------------------------
+
+15. Add files:
+    git add filename1 filename2
+
+16. Commit changes:
+    git commit -m "commit message"
+
+17. Check git status:
+    git status
+
+-----------------------------------------
+RUN PROJECT
+-----------------------------------------
+
+18. Start Django server:
+    python manage.py runserver
